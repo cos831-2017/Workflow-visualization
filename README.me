@@ -1,0 +1,25 @@
+Python application to generate visualization of workflows using the Bokeh library with MonetDB.
+Created by: Eduardo de Mello Castanho (@ducast)
+
+Requirements:
+    Python 2.6+
+    MonetDB
+    pymonetdb library (pip install pymonetdb)
+    bokeh library (pip install bokeh)
+
+How to use:
+    Initialize your MonetDB database;
+    Run sample with: 
+        python main.py [input] [-db database] [-u user] [-pw password] [-hs hostname]
+    Default values are:
+        input = sample.sql
+        database = voc
+        user = monetdb
+        password = monetdb
+        hostname = localhost
+    Input format:
+        Each line is a SQL query, no separation needed.
+        Queries must have select count (attribute) group by attribute.
+
+Known bugs:
+    At the end of each row a thin line is drawn with the color of the last label.
